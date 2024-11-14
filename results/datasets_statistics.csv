@@ -1,0 +1,6 @@
+dataset;tokens;types;sentences;pos_tags
+urum_words.txt;18976;5392;2222;13
+urum_morphs.txt;34817;2520;2222;28
+brown_small.txt;18989;4164;855;12
+brown_medium.txt;34818;6720;1613;12
+brown_words.txt;100553;14394;4623;12

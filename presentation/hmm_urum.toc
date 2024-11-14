@@ -1,0 +1,7 @@
+\babel@toc {ngerman}{}\relax 
+\beamer@sectionintoc {1}{Was sind DoReCo und Urum?}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{DoReCo}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Urum}{12}{0}{1}
+\beamer@sectionintoc {2}{Was ist ein Hidden Markov Model (HMM)?}{26}{0}{2}
+\beamer@sectionintoc {3}{HMM als POS-Tagger}{34}{0}{3}
+\beamer@sectionintoc {4}{Meine Implementierung eines HMM als POS-Tagger für Urum}{54}{0}{4}
