@@ -338,11 +338,11 @@ def hmm_and_viterbi_algorithm(train_sentences:list,test_sentences:list) -> tuple
 #Path to preprocessed data.
 data_path = "../../data/preprocessed/"
 #File to be processed.
-dataset = "brown_words.txt"
+dataset = "urum_words.txt"
 
 #Get token-tag-pairs from the respective file as tuples inside a list.
 print(f"Loading dataset: {dataset}")
-tagged_tokens = get_csv_as_list(data_path+dataset,"\t")
+tagged_tokens = get_csv_as_list(data_path+dataset,";")
 
 #First, append token-tag-pairs to lists, which represent sentences. Second, append every list to one main list.
 tagged_sentences = get_sent_from_wd_tag_pairs(tagged_tokens,"<E>","<E>")
@@ -378,7 +378,7 @@ for i in range(epochs):
     print(f"Epoch: {i+1}/{epochs}")
 
     #Create the training and test data randomly (optionally with a seed) by default in the ration 80:20 (train:test) from the list of tagged sentences.
-    train_sentences,test_sentences = split_train_test(tagged_sentences)#,seed=469283984701)
+    train_sentences,test_sentences = split_train_test(tagged_sentences,seed=469283984701)
     #Default seed I chose for comparing results: 469283984701
 
     #Train an HMM and test it using the Viterbi algorithm. Save the test results.

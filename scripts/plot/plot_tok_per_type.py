@@ -2,7 +2,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 
 #Name of the .csv-file containing the results of the tagger.
 csv_file = "../../results/datasets_statistics.csv"
@@ -22,9 +21,9 @@ fig,ax = plt.subplots()
 #Create the bars.
 ax.bar(datasets,tok_per_type,color="b",align="center")
 #Set the title of the figure and of the axes (x and y).
-ax.set_title("Number of tokens per types per dataset")
+ax.set_title("Average number of tokens per types per dataset")
 ax.set_xlabel("Datasets")
-ax.set_ylabel("Number of tokens per types")
+ax.set_ylabel("Average number of tokens per types")
 #Set the limits for values on the y-axis.
 ax.set_ylim(top=15,bottom=0)
 #Add the value of every bar on top of it.

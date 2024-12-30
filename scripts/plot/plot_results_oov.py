@@ -2,7 +2,6 @@
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 
 #Name of the .csv-file containing the results of the tagger.
 csv_file = "../../results/accuracy_and_time.csv"
@@ -19,14 +18,14 @@ fig,ax = plt.subplots()
 #Create the bars.
 ax.bar(datasets,oovs,color="b",align="center")
 #Set the title of the figure and of the axes (x and y).
-ax.set_title("Average number of word tokens not present in the training data\nnormalized by the number of tokens in the test data in %")
+ax.set_title("Average number of tokens not present in the training but in the test set\nnormalized by the number of tokens in the test set in % per dataset")
 ax.set_xlabel("Datasets")
-ax.set_ylabel("Average number of out of vocabulary words in %")
+ax.set_ylabel("Average number of tokens present in the test\nbut not in the training set in %")
 #Set the limits for values on the y-axis.
 ax.set_ylim(top=100,bottom=0)
 #Add the value (percentage) of every bar on top of it.
 for i in range(len(datasets)):
-    ax.text(i,oovs[i]+1,str(df["oov"][i]),ha="center",va="bottom")
+    ax.text(i,oovs[i]+1,str(df["oov"][i])+"%",ha="center",va="bottom")
 #Print the plot.
 plt.tight_layout()
 plt.show()
